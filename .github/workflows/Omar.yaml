@@ -17,9 +17,11 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: "echo message"
-      run: echo "this omar from prod " > text.txt
-    - name: "cat message"
-      run: cat text.txt
+      run: |
+       echo "this omar from prod " > text.txt
+       cat text.txt
+    - name: what files are here?
+      run: ls -la
  
  dev-job:
    if: inputs.env == 'dev'
