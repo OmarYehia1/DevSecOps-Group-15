@@ -18,6 +18,8 @@ jobs:
    steps:
     - name: "echo message"
       run: echo "this omar from prod " > text.txt
+    - name: "cat message"
+      run: cat text.txt
  
  dev-job:
    if: inputs.env == 'dev'
@@ -25,4 +27,5 @@ jobs:
    steps:
     - name: "echo message"
       run: echo "this omar from env " > text.txt
-      
+    - name: "cat message"
+      run: cat text.txt  
