@@ -14,8 +14,10 @@ jobs:
         steps:
             - name: checkout repo code 
               uses: actions/checkout@v7
-              
+
             - name: setting up Python
               uses: actions/setup-python@v7
               with:
                 python-version: '3.13'
+            - name: run calculator
+              run: python3 calculator.py
